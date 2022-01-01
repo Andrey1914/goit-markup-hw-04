@@ -118,6 +118,7 @@ span {
 }
 
 /* hero */
+
 .section,
 .section-team {
   padding-top: 94px;
@@ -127,7 +128,11 @@ span {
 .section-hero {
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--bg-hero-color);
+  max-width: 1600px;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: rgba(47, 48, 58, 0.4);
 }
 
 .hero-title {
@@ -352,6 +357,8 @@ span {
 .filter:active {
   color: #ffffff;
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .card-list {
@@ -371,6 +378,11 @@ span {
 .card-item > a {
   display: block;
   text-decoration: none;
+}
+
+.card-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .card-title {
