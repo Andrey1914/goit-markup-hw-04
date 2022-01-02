@@ -313,6 +313,11 @@ span {
   margin-left: 30px;
 }
 
+.button-icon {
+  width: 170px;
+  height: 92px;
+}
+
 /* footer */
 .page-footer {
   padding-top: 60px;
