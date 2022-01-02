@@ -94,22 +94,23 @@ span {
 .site-nav,
 .contact {
   display: flex;
-  flex-direction: row;
 }
 
 .site-nav a {
   color: var(--color-of-headers);
 }
 
+.site-nav a {
+  margin-left: 50px;
+}
+
 .site-nav a,
 .contact a {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.1;
   line-height: 100%;
   letter-spacing: 0.02em;
   text-decoration: none;
-  margin-left: 50px;
 }
 
 /* contact */
@@ -117,6 +118,35 @@ span {
   color: var(--text-color);
 }
 
+.contact {
+  flex-wrap: wrap;
+}
+
+.contact > li:first-child {
+  margin-right: 50px;
+}
+
+.mail-icon {
+  width: 16px;
+  height: 12px;
+}
+
+.phone-icon {
+  width: 10px;
+  height: 16px;
+}
+
+.mail-icon,
+.phone-icon {
+  fill: #757575;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.mail-icon:hover,
+.phone-icon:hover {
+  fill: var(--accent-color);
+}
 /* hero */
 
 .section,
@@ -286,6 +316,23 @@ span {
 
 .speciality {
   color: var(--text-color);
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  width: 206px;
+  height: 44px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16px;
+}
+
+.social-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: #afb1b8;
 }
 
 /* clients */
