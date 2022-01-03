@@ -209,31 +209,18 @@ span {
   width: 270px;
 }
 
-.experience-item::before {
+.icons-place {
   display: block;
-  content: '';
   height: 120px;
-  margin-bottom: 30px;
   background-color: #f5f4fa;
   border-radius: 4px;
-  background-repeat: no-repeat;
+  margin-bottom: 30px;
+}
+
+.experience-icon {
+  width: 70px;
+  height: 70px;
   background-position: center;
-}
-
-.experience-item:nth-child(1)::before {
-  background-image: url('/images/antenna.svg');
-}
-
-.experience-item:nth-child(2)::before {
-  background-image: url('/images/clock.svg');
-}
-
-.experience-item:nth-child(3)::before {
-  background-image: url('/images/diagram.svg');
-}
-
-.experience-item:nth-child(4)::before {
-  background-image: url('/images/astronaut.svg');
 }
 
 .experience-title {
@@ -355,18 +342,69 @@ span {
 .clients-item {
   width: 170px;
   height: 92px;
-  border: 1px solid #afb1b8;
-  box-sizing: border-box;
-  border-radius: 4px;
 }
 
 .clients-list > li:not(:first-child) {
   margin-left: 30px;
 }
 
-.button-icon {
+.clients-button {
   width: 170px;
   height: 92px;
+  padding: 0;
+  border-radius: 4px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.ya-co {
+  fill: #afb1b8;
+  width: 41px;
+  height: 46.7px;
+}
+
+.tag-line-here {
+  fill: #afb1b8;
+  width: 40px;
+  height: 52px;
+}
+
+.company {
+  fill: #afb1b8;
+  width: 43.46px;
+  height: 41.18px;
+}
+
+.foster-peters {
+  fill: #afb1b8;
+  width: 84.44px;
+  height: 40.62px;
+}
+
+.brand {
+  fill: #afb1b8;
+  width: 62.54px;
+  height: 45.43px;
+}
+
+.tag-line {
+  fill: #afb1b8;
+  width: 93.79px;
+  height: 43.93px;
+}
+
+.clients-button:hover {
+  color: var(--accent-color);
+}
+
+.ya-co:hover,
+.tag-line-here:hover,
+.company:hover,
+.foster-peters:hover,
+.brand:hover,
+.tag-line:hover {
+  fill: var(--accent-color);
 }
 
 /* footer */
