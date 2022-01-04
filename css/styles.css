@@ -148,7 +148,14 @@ span {
 }
 
 .mail-icon:hover,
-.phone-icon:hover {
+.mail-icon:focus,
+.phone-icon:hover,
+.phone-icon:focus {
+  fill: var(--accent-color);
+}
+
+.link:hover .mail-icon,
+.link:hover .phone-icon {
   fill: var(--accent-color);
 }
 /* hero */
@@ -311,22 +318,31 @@ span {
   margin-top: 16px;
 }
 
+.links,
 .social-links > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .social-link {
-  width: 44px;
-  height: 44px;
+  width: 20px;
+  height: 20px;
   fill: #afb1b8;
-  background-color: #ffffff;
-  background-size: contain;
-  background-position: center;
 }
 
-.social-link:hover {
-  border-radius: 50%;
+.links:hover,
+.links:focus,
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.links:hover .social-link {
   fill: #ffffff;
   background-color: var(--accent-color);
 }
@@ -383,8 +399,69 @@ span {
   background-color: var(--footer-color);
 }
 
-.container-footer {
-  display: block;
+.box {
+  display: flex;
+}
+
+.box-adress {
+  display: flex;
+  flex-direction: column;
+}
+
+.box-links {
+  display: flex;
+  flex-direction: column;
+  width: 206px;
+  margin-left: 70px;
+}
+
+.join {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.link-list {
+  display: flex;
+  justify-content: space-between;
+  width: 206px;
+  height: 44px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.footer-links,
+.link-list > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-link {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+}
+
+.footer-links:hover,
+.footer-links:focus,
+.footer-link:hover,
+.footer-link:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-links:hover .footer-link {
+  fill: #ffffff;
+  background-color: var(--accent-color);
 }
 
 .footer-logo {
