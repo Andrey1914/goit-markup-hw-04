@@ -433,6 +433,8 @@ span {
   font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
   color: #ffffff;
 }
 
@@ -443,7 +445,6 @@ span {
   height: 44px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
 }
 
 .footer-links,
