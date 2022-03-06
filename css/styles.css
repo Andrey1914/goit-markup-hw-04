@@ -148,7 +148,14 @@ span {
 }
 
 .mail-icon:hover,
-.phone-icon:hover {
+.mail-icon:focus,
+.phone-icon:hover,
+.phone-icon:focus {
+  fill: var(--accent-color);
+}
+
+.link:hover .mail-icon,
+.link:hover .phone-icon {
   fill: var(--accent-color);
 }
 /* hero */
@@ -167,7 +174,7 @@ span {
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('/images/img-6.jpg');
+    url('../images/img-6.jpg');
 }
 
 .hero-title {
@@ -209,31 +216,20 @@ span {
   width: 270px;
 }
 
-.experience-item::before {
-  display: block;
-  content: '';
+.icons-place {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
   height: 120px;
   margin-bottom: 30px;
   background-color: #f5f4fa;
   border-radius: 4px;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
-.experience-item:nth-child(1)::before {
-  background-image: url('/images/antenna.svg');
-}
-
-.experience-item:nth-child(2)::before {
-  background-image: url('/images/clock.svg');
-}
-
-.experience-item:nth-child(3)::before {
-  background-image: url('/images/diagram.svg');
-}
-
-.experience-item:nth-child(4)::before {
-  background-image: url('/images/astronaut.svg');
+.experience-icon {
+  width: 70px;
+  height: 70px;
 }
 
 .experience-title {
@@ -320,6 +316,7 @@ span {
 
 .speciality {
   color: var(--text-color);
+  margin-bottom: 16px;
 }
 
 .social-links {
@@ -329,14 +326,35 @@ span {
   height: 44px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 16px;
 }
 
-.social-link {
+.links,
+.social-links > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.social-link {
+  width: 20px;
+  height: 20px;
   fill: #afb1b8;
+}
+
+.links:hover,
+.links:focus,
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.links:hover .social-link {
+  fill: #ffffff;
+  background-color: var(--accent-color);
 }
 
 /* clients */
@@ -352,21 +370,38 @@ span {
   flex-basis: calc(100% / 6);
 }
 
-.clients-item {
-  width: 170px;
-  height: 92px;
-  border: 1px solid #afb1b8;
-  box-sizing: border-box;
-  border-radius: 4px;
-}
-
 .clients-list > li:not(:first-child) {
   margin-left: 30px;
 }
 
-.button-icon {
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border-radius: 4px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  background-color: #ffffff;
   width: 170px;
   height: 92px;
+}
+
+.label {
+  fill: #afb1b8;
+  width: 106px;
+  height: 60px;
+}
+
+.client-link:hover,
+.client-link:focus {
+  border-radius: 4px;
+  border: 1px solid var(--accent-color);
+}
+.label:hover,
+.label:focus,
+.client-link:hover .label {
+  fill: var(--accent-color);
 }
 
 /* footer */
@@ -376,8 +411,70 @@ span {
   background-color: var(--footer-color);
 }
 
-.container-footer {
-  display: block;
+.box {
+  display: flex;
+}
+
+.box-adress {
+  display: flex;
+  flex-direction: column;
+}
+
+.box-links {
+  display: flex;
+  flex-direction: column;
+  width: 206px;
+  padding-top: 10px;
+  margin-left: 70px;
+}
+
+.join {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.link-list {
+  display: flex;
+  justify-content: space-between;
+  width: 206px;
+  height: 44px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-links,
+.link-list > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-link {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+}
+
+.footer-links:hover,
+.footer-links:focus,
+.footer-link:hover,
+.footer-link:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-links:hover .footer-link {
+  fill: #ffffff;
+  background-color: var(--accent-color);
 }
 
 .footer-logo {
@@ -489,7 +586,7 @@ span {
   text-decoration: none;
 }
 
-.card-item:hover {
+.card-item > a:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
